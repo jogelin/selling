@@ -1,0 +1,45 @@
+$font-stack: 'roboto-regular-webfont';
+$dark-grey: #666;
+$light-grey: #eee;
+
+@each $font-face in roboto-black-webfont, roboto-blackitalic-webfont, roboto-bold-webfont, roboto-bolditalic-webfont, roboto-italic-webfont, roboto-light-webfont, roboto-medium-webfont, roboto-mediumitalic-webfont, roboto-lightitalic-webfont, roboto-regular-webfont, roboto-thin-webfont, roboto-thinitalic-webfont, robotocondensed-bold-webfont, robotocondensed-bolditalic-webfont, robotocondensed-light-webfont, robotocondensed-lightitalic-webfont, robotocondensed-regular-webfont, robotocondensed-italic-webfont  {
+    @font-face {
+        font-family: $font-face; font-style: normal; font-weight: normal;
+        src: url('../webfontkit/#{$font-face}.eot');
+        src: url('webfontkit/kgsweetnsassy-webfont.eot?#iefix') format('embedded-opentype'),
+             url('../webfontkit/#{$font-face}.woff') format('woff'),
+             url('../webfontkit/#{$font-face}.ttf')  format('truetype')
+             url('../webfontkit/#{$font-face}.svg#@{family}') format('svg');
+        font-smooth:always;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+html,
+body,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 100% $font-stack;
+    color: $dark-grey;
+}
+
+#material-toolbar-sidenav {
+    background-color:$light-grey;
+}
+
+#item-content {
+    padding:0;
+}
+
+#item-min {
+
+    padding:0 5px;
+    width:200px;
+}
+

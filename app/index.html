@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="selling" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="selling" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="selling" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="selling" class="no-js"> <!--<![endif]-->
+<head>
+
+    <title>Sky Selling</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="images/heart_small.png" />
+
+    <link rel="stylesheet" href="css/bower.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+
+</head>
+<body layout="horizontal" ng-controller="MainCtrl as mainCtrl">
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve  your experience.</p>
+    <![endif]-->
+
+
+    <material-sidenav layout="vertical" class="material-sidenav-left material-whiteframe-z1" component-id="left" flex>
+        <material-toolbar id="material-toolbar-sidenav">
+            <div class="material-toolbar-tools">
+                <material-button>test</material-button>
+            </div>
+
+        </material-toolbar>
+        <material-content id="item-content" layout="horizontal" flex wrap>
+
+
+            <div id="item-min" ng-repeat="item in mainCtrl.items">
+                <div class="material-whiteframe-z1">
+                   qsd
+                </div>
+            </div>
+
+        </material-content>
+    </material-sidenav>
+
+
+    <div layout="vertical" tabindex="-1" role="main" layout-fill flex>
+
+
+    </div>
+
+<!--div layout="vertical" layout-align="start center" layout-fill tabindex="-1" role="main" ng-controller="MenuCtrl as menuCtrl">
+    <material-toolbar class="material-whiteframe-z1" selling-banner>
+
+            <div layout="horizontal" layout-md="vertical" layout-lg="vertical" flex  offset-md="5" offset-lg="10" offset-xlg="20">
+                <div class="toolbar-title">VERDICCI</div>
+                <div class="toolbar-subtitle">HOME & STYLE</div>
+                <div layout="horizontal" layout-align="end" flex>
+                    <material-button id="button-slider"  ng-click="menuCtrl.toggleLeftMenu()" block hide-md hide-lg>
+                        <img src="images/icon-menu.png" />
+                   </material-button>
+                </div>
+            </div>
+
+    </material-toolbar>
+    <div id="page-container" layout="horizontal" flex>
+        <div id="page" class="material-whiteframe-z1" layout="vertical" flex flex-md="90" offset-md="5" flex-lg="80" offset-lg="10" flex-xlg="60" offset-xlg="20">
+            <div ng-include="'lib/menu/menu_view.html'"></div>
+            <material-content scroll-y flex>
+                <div id="view-title" layout="horizontal" >
+                    <div><h1>VERDICCI</h1></div>
+                    <div>&nbsp;<h1><img src="images/heart_small.png"/></h1>&nbsp;</div>
+                    <div flex><h1>{{menuCtrl.currentMenu().title}}</h1></div>
+                </div>
+                <div ng-view flex></div>
+            </material-content>
+         </div>
+    </div>
+
+</div-->
+
+<script src="js/bower.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
