@@ -1,0 +1,5 @@
+body,html,ol,ul{margin:0;padding:0}
+body{font:100% RobotoDraft;color:#666;background-color:#eee}
+core-header-panel{width:100%;height:100%;left:0;top:0;position:absolute}
+core-header-panel>core-toolbar{background-color:#4682B4}
+core-header-panel>section{padding-top:100px}

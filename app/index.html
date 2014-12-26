@@ -14,18 +14,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /-->
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes">
 
     <link rel="icon" type="image/png" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="images/heart_small.png" />
+    <link rel="apple-touch-icon" href="images/.png" />
 
-    <link rel="stylesheet" href="css/bower.min.css">
-    <link rel="stylesheet" href="css/app.min.css">
+    <!--<link rel="stylesheet" href="css/bower.min.css">-->
+    <link rel="stylesheet" href="sass/app.css">
+
+    <script src="components/webcomponentsjs/webcomponents.min.js"></script>
+
+    <link rel="import" href="components/font-roboto/roboto.html">
+
+    <link rel="import" href="components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="components/core-icon-button/core-icon-button.html">
+    <link rel="import" href="components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="components/paper-ripple/paper-ripple.html">
+    <link rel="import" href="components/core-animation/core-animation.html">
+    <link rel="import" href="components/core-ajax/core-ajax.html">
+    <link rel="import" href="components/core-image/core-image.html">
+
+    <link rel="import" href="elements/selling-main.html">
+
 
 </head>
-<body layout="horizontal" ng-controller="MainCtrl as mainCtrl">
+<body ng-controller="MainCtrl as mainCtrl" >
 
     <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -33,30 +51,19 @@
     <![endif]-->
 
 
-    <material-sidenav layout="vertical" class="material-sidenav-left material-whiteframe-z1" component-id="left" flex>
-        <material-toolbar id="material-toolbar-sidenav">
-            <div class="material-toolbar-tools">
-                <material-button>test</material-button>
-            </div>
-
-        </material-toolbar>
-        <material-content id="item-content" layout="horizontal" flex wrap>
-
-
-            <div id="item-min" ng-repeat="item in mainCtrl.items">
-                <div class="material-whiteframe-z1">
-                   qsd
-                </div>
-            </div>
-
-        </material-content>
-    </material-sidenav>
+    <core-header-panel mode="cover">
+        <core-toolbar class="tall">
+            <core-icon-button icon="search"></core-icon-button>
+            <div>Filter Item</div>
+        </core-toolbar>
+        <section horizontal center-justified layout>
+            <selling-main flex></selling-main>
+        </section>
+    </core-header-panel>
 
 
-    <div layout="vertical" tabindex="-1" role="main" layout-fill flex>
 
 
-    </div>
 
 <!--div layout="vertical" layout-align="start center" layout-fill tabindex="-1" role="main" ng-controller="MenuCtrl as menuCtrl">
     <material-toolbar class="material-whiteframe-z1" selling-banner>
@@ -87,8 +94,5 @@
     </div>
 
 </div-->
-
-<script src="js/bower.min.js"></script>
-<script src="js/app.min.js"></script>
 </body>
 </html>

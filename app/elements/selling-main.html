@@ -1,0 +1,57 @@
+<polymer-element name="selling-main">
+
+
+    <template>
+        <link rel="stylesheet" href="selling-main.css">
+        <div id="el">Fade me out</div>
+        <core-ajax
+                auto
+                url="../data/items.json"
+                handleAs="json"
+                response="{{items}}"
+                on-core-response="{{handleResponse}}"></core-ajax>
+
+        <div horizontal center-justified layout >
+            <div class="small-item" horizontal layout wrap>
+                <template repeat="{{item in items}}" vertical layout>
+                    <core-image sizing="cover" src="data/photos/{{item.images[0]}}" layout vertical>
+
+                        <div flex></div>
+                        <div id="sub-item">{{item.name}}</div>
+                        <paper-ripple fit></paper-ripple>
+                    </core-image>
+
+                </template>
+            </div>
+        </div>
+
+
+        <core-animation id="fadeout" duration="500">
+            <core-animation-keyframe>
+                <core-animation-prop name="opacity" value="1"></core-animation-prop>
+            </core-animation-keyframe>
+            <core-animation-keyframe>
+                <core-animation-prop name="opacity" value="0"></core-animation-prop>
+            </core-animation-keyframe>
+        </core-animation>
+
+
+    </template>
+    <script>
+        Polymer({
+            ready: function() {
+
+
+            },
+            handleResponse: function(event, response) {
+                console.log(response);
+            }
+        });
+
+    </script>
+    <script>
+  var animation = document.getElementById('fadeout');
+  animation.target = document.getElementById('el');
+  animation.play();
+</script>
+</polymer-element>

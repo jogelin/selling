@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "angular": "~1.3.0-rc.5",
-    "angular-animate": "~1.3.0-rc.5",
-    "angular-route": "~1.3.0-rc.5",
-    "angular-material": "~0.4.0",
-    "json3": "~3.3.1",
-    "es5-shim": "~3.1.0",
-    "html5-boilerplate": "~4.3.0"
+    "polymer": "Polymer/polymer#~0.5.2",
+    "core-image": "Polymer/core-image#~0.5.2",
+    "core-header-panel": "Polymer/core-header-panel#~0.5.2",
+    "core-toolbar": "Polymer/core-toolbar#~0.5.2",
+    "paper-shadow": "Polymer/paper-shadow#~0.5.2",
+    "core-animation": "Polymer/core-animation#~0.5.2",
+    "core-ajax": "Polymer/core-ajax#~0.5.2",
+    "font-roboto": "Polymer/font-roboto#~0.5.2",
+    "paper-ripple": "Polymer/paper-ripple#~0.5.2"
   },
   "appPath": "app"
 }

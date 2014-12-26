@@ -1,0 +1,4 @@
+.small-item core-image{margin:5px;padding:0;background-color:#fff;width:180px;height:200px;border-radius:0}
+.small-item core-image:hover{cursor:pointer}
+.small-item core-image:hover #sub-item{display:block}
+.small-item core-image #sub-item{opacity:.5;padding:5px;background-color:#000;display:none}
